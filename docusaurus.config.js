@@ -69,7 +69,7 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "btcKit",
+        title: "BtcKit",
         logo: {
           alt: "BtcKit Logo",
           src: "img/logo-btckit.png",

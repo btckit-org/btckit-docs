@@ -2,6 +2,10 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
 
+import CodeBlock from "@theme/CodeBlock";
+
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
+
 type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<"svg">>;
@@ -11,7 +15,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "👑 Bitcoin First",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    Svg: require("@site/static/img/blob-bitcoin.svg").default,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -59,15 +63,5 @@ function Feature({ title, Svg, description }: FeatureItem) {
 }
 
 export default function HomepageFeatures(): JSX.Element {
-  return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  return null;
 }

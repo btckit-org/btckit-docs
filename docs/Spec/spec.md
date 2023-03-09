@@ -1,5 +1,5 @@
 ---
-title: Spec
+title: Spec 🚧
 ---
 
 ## Introduction
@@ -16,10 +16,13 @@ BtcKit lays out how to communicate with a Bitcoin wallet, and how to handle the 
 
 ### `tl;dr`
 
-Two simple methods on a global `window.btc` object.
+The specification can be split into two parts.
+First, the interface for communicating with a wallet via a secure channel, using an injected JavaScript global object. The following methods are provided via `window.btc`:
 
 - `request(method: string, params?: {}): Promise<any>`
-- `listen(event: string, callback: () => void, params?: {})`
+- `listen(event: string, callback: (r) => void, params?: {})`
+
+Secondly, the standardization of how the `method`/`event` names are exepected and how params should be serialized.
 
 ## Interface
 
@@ -53,6 +56,49 @@ window.btc.listen("networkChanged", (network) => {
 });
 ```
 
+:::note
+Wallets can decide on how handle unimplemented methods (or make it configurable to the user).
+E.g. an unimplemented method could throw an error, or return an error object, or be "dropped" and stuck indefinetely.
+
+To reduce the ability to use the interface for fingerprinting, wallets could use implement additional anti-tracking measures.
+:::
+
+---
+
 ### JSON RPC 2.0
 
 (with named parameters recommended over positional parameters)
+
+#### Modifications
+
+In general, the JSON RPC 2.0 spec is followed, with the following recommendations:
+
+- Prefer named parameters over positional parameters
+- Use `camelCase` for method names
+
+---
+
+## Layers
+
+Any other layers on top of Bitcoin are offered behind optional interfaces, which follow the same standard as previously described.
+
+The only difference is that the method and event names are prefixed with the layer/chain name.
+
+Examples
+
+- for Lightning the an example method is `ln_getInvoice`
+- for Stacks the an example method is `stx_getAddress`
+
+Your trusted wallet
+
+---
+
+## ☁️ Air
+
+`beta`, `subject to change`
+
+BtcKit recommenda using the WalletConnect standard with the BIP XXX chain id for bitcoin for wallet connections over the "Air" (sort of airgapped) — e.g. initiating a connection via QR codes and encrypted relays.
+
+The chainid should be the respective chain for L2s, if applicable. It can be left empty if none is applicable e.g. Lightning.
+
+Or maybe let's use a specific id for this protocol as the chainid is not needed or should be pushed to the params (or always handled by the wallet itself)
