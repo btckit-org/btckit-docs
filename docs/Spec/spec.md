@@ -4,20 +4,22 @@ title: Spec 🚧
 
 ## Introduction
 
-BtcKit aims to be a simple, easy to use, and secure Bitcoin wallet standard — inspired by and built on top of proven standards in the Bitcoin ecosystem.
+BtcKit is a simple, easy to use, and secure Bitcoin wallet standard — inspired by, and built on top of, proven standards in the Bitcoin ecosystem.
 
-BtcKit lays out how to communicate with a Bitcoin wallet, and how to handle the responses.
+BtcKit lays out how to communicate with Bitcoin wallets, and how to handle the responses.
 
 - **JSON RPC 2.0** — Communication via safe standardized JSON payloads
 - **Layered** — Layer-2's are offered behind optional interfaces (e.g. Lightning, Liquid, Stacks)
 - **Sessionless** — No need to maintain a session with the wallet
 - **Private & Secure** — Interfaces are designed to be privacy friendly and safe to use
-- **Typesafe** — Typescript types are provided for all interfaces
+- **Typesafe** — TypeScript types are provided for all interfaces
 
 ### `tl;dr`
 
-The specification can be split into two parts.
-First, the interface for communicating with a wallet via a secure channel, using an injected JavaScript global object. The following methods are provided via `window.btc`:
+The specification are split into two parts.
+First, the interface for communicating with a wallet via a secure channel, using an injected JavaScript global object.
+
+The following methods are provided via `globalThis.btc`:
 
 - `request(method: string, params?: {}): Promise<any>`
 - `listen(event: string, callback: (r) => void, params?: {})`
@@ -37,12 +39,18 @@ The main focus is on standardizing a method of serializing named parameters
 ```ts
 import "@btckit/types";
 
-const address = await window.btc.request("getAddress", {
+const address = await globalThis.btc.request("getAddress", {
   account: 0,
   change: false,
   index: 0,
 });
 ```
+
+:::note
+
+In a web environment, you can also use [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window). [`globalThis`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) is the environment-agnostic global variable.
+
+:::
 
 ### `listen` — Event listener interface
 
@@ -51,7 +59,7 @@ const address = await window.btc.request("getAddress", {
 ```ts
 import "@btckit/types";
 
-window.btc.listen("networkChanged", (network) => {
+globalThis.btc.listen("networkChanged", (network) => {
   console.log("Network switched in wallet", network);
 });
 ```
