@@ -9,7 +9,7 @@ BtcKit is a simple, easy to use, and secure Bitcoin wallet standard — inspired
 BtcKit lays out how to communicate with Bitcoin wallets, and how to handle the responses.
 
 - **JSON RPC 2.0** — Communication via safe standardized JSON payloads
-- **Layered** — Layer-2's are offered behind optional interfaces (e.g. Lightning, Liquid, Stacks)
+<!-- - **Layered** — Layer-2's are offered behind optional interfaces (e.g. Lightning, Liquid, Stacks) -->
 - **Sessionless** — No need to maintain a session with the wallet
 - **Private & Secure** — Interfaces are designed to be privacy friendly and safe to use
 - **Typesafe** — TypeScript types are provided for all interfaces
