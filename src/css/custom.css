@@ -72,9 +72,22 @@ html[data-theme="dark"] {
   margin: 0;
 }
 
+hr {
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
 nav.navbar {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(8px);
   background-color: var(--btckit-navbar-bg);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.theme-admonition {
+  border: 1px solid #e2e8f0;
+}
+
+.theme-admonition span[class^="admonitionIcon"] {
+  display: none;
 }
