@@ -90,9 +90,8 @@ function HomepageHeader() {
                         {/* todo: "no need to connect or enable, just do" */}
                         <div className="header-code">
                           <CodeBlock language="ts" showLineNumbers>
-                            {`import '@btckit/types'
-
-let addr = await window.btckit.request("getAddress", {
+                            {`import '@btckit/types';
+const address = await window.btc?.request("requestAccounts", {
   index: 2
 })
                           `}
