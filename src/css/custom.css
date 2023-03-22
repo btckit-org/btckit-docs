@@ -39,11 +39,12 @@ pre {
 
   --ifm-global-shadow-lw: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 
+  /* custom */
   --btckit-navbar-bg: rgba(255, 255, 255, 0.75);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme="dark"] {
+[data-theme='dark'] {
   --ifm-color-primary: #fba160;
   --ifm-color-primary-dark: #fa8d3e;
   --ifm-color-primary-darker: #fa832d;
@@ -56,10 +57,26 @@ pre {
   --btckit-navbar-bg: rgba(75, 86, 100, 0.5);
 }
 
-html[data-theme="dark"] {
-  --ifm-background-color: #6d767f;
-  --ifm-background-color: rgba(74, 85, 99, 1.00);
-  
+html[data-theme='dark'] {
+  --ifm-background-color: #4a5563;
+}
+
+hr {
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+h3 code,
+h4 code {
+  border: none;
+  padding: 1.6px 4px 2px;
+}
+
+nav.navbar {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: var(--btckit-navbar-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer--dark {
@@ -74,22 +91,14 @@ html[data-theme="dark"] {
   margin: 0;
 }
 
-hr {
-  margin-top: 2.5rem;
-  margin-bottom: 3rem;
-}
-
-nav.navbar {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(8px);
-  background-color: var(--btckit-navbar-bg);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 .theme-admonition {
-  border: 1px solid #e2e8f0;
+  border-width: 1px;
 }
 
-.theme-admonition span[class^="admonitionIcon"] {
+.theme-admonition span[class^='admonitionIcon'] {
   display: none;
+}
+
+.alert--secondary {
+  --ifm-alert-border-color: var(--ifm-color-emphasis-300);
 }

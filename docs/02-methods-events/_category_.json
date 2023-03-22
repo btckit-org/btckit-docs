@@ -1,9 +1,7 @@
 {
   "position": 2.5,
   "label": "Methods & Events",
-  "collapsible": true,
   "collapsed": false,
-  "className": "red",
   "link": {
     "type": "generated-index",
     "title": "Namespaces"

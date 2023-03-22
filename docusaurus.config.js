@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'BtcKit',
+  title: 'btckit',
   tagline: 'A web standard for all layers of the Bitcoin protocol',
   favicon: 'img/favicon.png',
 
@@ -69,9 +69,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'BtcKit',
+        title: 'btckit',
         logo: {
-          alt: 'BtcKit Logo',
+          alt: 'btckit Logo',
           src: 'img/logo-btckit.png',
         },
         items: [
@@ -132,7 +132,7 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} BtcKit`,
+        copyright: `Copyright © ${new Date().getFullYear()} btckit`,
       },
       prism: {
         theme: lightCodeTheme,

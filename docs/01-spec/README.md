@@ -1,14 +1,18 @@
 ---
 id: spec
-title: Spec 🚧
+title: Specification
 slug: /spec
 ---
 
 ## Introduction
 
-BtcKit is a simple, easy to use, and secure Bitcoin wallet standard — inspired by, and built on top of, proven standards in the Bitcoin ecosystem.
+btckit is a simple, easy to use, and secure Bitcoin wallet standard — inspired by, and built on top of, proven standards in the Bitcoin ecosystem.
 
-BtcKit lays out how to communicate with Bitcoin wallets, and how to handle the responses.
+:::note
+⚠ This is a work in progress, and is subject to change.
+:::
+
+btckit lays out how to communicate with Bitcoin wallets, and how to handle the responses.
 
 - **JSON RPC 2.0** — Communication via safe standardized JSON payloads
 <!-- - **Layered** — Layer-2's are offered behind optional interfaces (e.g. Lightning, Liquid, Stacks) -->
@@ -49,9 +53,7 @@ const address = await globalThis.btc.request('getAddresses', {
 ```
 
 :::note
-
-In a web environment, you can also use [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window). [`globalThis`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) is the environment-agnostic global variable.
-
+In a web environment, you can also use [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window). The environment-agnostic global variable is [`globalThis`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis).
 :::
 
 ### `listen` — Event listener interface
@@ -68,9 +70,7 @@ globalThis.btc.listen('networkChanged', network => {
 
 :::note
 Wallets can decide on how handle unimplemented methods (or make it configurable to the user).
-E.g. an unimplemented method could throw an error, or return an error object, or be "dropped" and stuck indefinetely.
-
-To reduce the ability to use the interface for fingerprinting, wallets could use implement additional anti-tracking measures.
+E.g. an unimplemented method could throw an error, or return an error object, or be "dropped" and stuck indefinitely.
 :::
 
 ---
@@ -84,7 +84,7 @@ To reduce the ability to use the interface for fingerprinting, wallets could use
 In general, the JSON RPC 2.0 spec is followed, with the following recommendations:
 
 - Prefer named parameters over positional parameters
-- Use `camelCase` for method names
+<!-- - Use `camelCase` for method names -- not super compatible with webbtc, maybe stay case insensitive -->
 
 ---
 
@@ -98,17 +98,3 @@ Examples
 
 - for Lightning the an example method is `ln_getInvoice`
 - for Stacks the an example method is `stx_getAddress`
-
-Your trusted wallet
-
----
-
-## ☁️ Air
-
-`beta`, `subject to change`
-
-BtcKit recommenda using the WalletConnect standard with the BIP XXX chain id for bitcoin for wallet connections over the "Air" (sort of airgapped) — e.g. initiating a connection via QR codes and encrypted relays.
-
-The chainid should be the respective chain for L2s, if applicable. It can be left empty if none is applicable e.g. Lightning.
-
-Or maybe let's use a specific id for this protocol as the chainid is not needed or should be pushed to the params (or always handled by the wallet itself)
