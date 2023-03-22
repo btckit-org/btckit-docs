@@ -16,7 +16,7 @@ globalThis.btc.request('signPsbt', params);
 #### `response`
 
 ```ts
-type ResponseResult = {
+ResponseResult = {
   psbtHex: string;
   inputToSign: {
     sigHash: any[];

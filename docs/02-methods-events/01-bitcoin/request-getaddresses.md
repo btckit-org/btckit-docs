@@ -12,17 +12,17 @@ globalThis.btc.request('getAddresses', params);
 #### `params` type
 
 ```ts
-type Params = {
-  types: PaymentType[];
+Params = {
+  types?: PaymentType[];
 };
 
-type PaymentType = 'p2pkh' | 'p2sh' | 'p2wpkh-p2sh' | 'p2wpkh' | 'p2tr';
+PaymentType = 'p2pkh' | 'p2sh' | 'p2wpkh-p2sh' | 'p2wpkh' | 'p2tr';
 ```
 
 #### `response`
 
 ```ts
-type ResponseResult = {
+ResponseResult = {
   addresses: {
     type: PaymentType;
     address: string;

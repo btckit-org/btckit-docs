@@ -12,7 +12,7 @@ globalThis.btc.request('getInfo');
 #### `response`
 
 ```ts
-type ResponseResult = {
+ResponseResult = {
   version: string;
   supportedMethods?: string[];
 };
