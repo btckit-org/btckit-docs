@@ -39,9 +39,9 @@ The main focus is on standardizing a method of serializing named parameters
 #### Examples
 
 ```ts
-import "@btckit/types";
+import '@btckit/types';
 
-const address = await globalThis.btc.request("getAddresses", {
+const address = await globalThis.btc.request('getAddresses', {
   account: 0,
   change: false,
   index: 0,
@@ -59,10 +59,10 @@ In a web environment, you can also use [`window`](https://developer.mozilla.org/
 #### Examples
 
 ```ts
-import "@btckit/types";
+import '@btckit/types';
 
-globalThis.btc.listen("networkChanged", (network) => {
-  console.log("Network switched in wallet", network);
+globalThis.btc.listen('networkChanged', network => {
+  console.log('Network switched in wallet', network);
 });
 ```
 
