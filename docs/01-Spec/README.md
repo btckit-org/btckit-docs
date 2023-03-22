@@ -1,5 +1,7 @@
 ---
+id: spec
 title: Spec 🚧
+slug: /spec
 ---
 
 ## Introduction
