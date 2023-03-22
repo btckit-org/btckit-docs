@@ -22,7 +22,7 @@ type PaymentType = 'p2pkh' | 'p2sh' | 'p2wpkh-p2sh' | 'p2wpkh' | 'p2tr';
 #### `response`
 
 ```ts
-type Response = {
+type ResponseResult = {
   addresses: {
     type: PaymentType;
     address: string;
@@ -32,10 +32,18 @@ type Response = {
 
 #### `example`
 
-```ts title=test
+```ts
 const response = await window.btc.request('getAddresses', {
   types: 'p2tr',
 });
 
-console.log(response.addresses[0]); // { type: 'p2tr', address: 'bc1q...' }
+console.log(response);
+// {
+//   jsonrpc: '2.0',
+//   id: 'getInfo',
+//   result: [{
+//     type: 'p2tr',
+//     address: 'bc1q...',
+//   }],
+// }
 ```
