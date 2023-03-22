@@ -8,7 +8,7 @@ slug: /spec
 
 btckit is a simple, easy to use, and secure Bitcoin wallet standard — inspired by, and built on top of, proven standards in the Bitcoin ecosystem.
 
-:::note
+:::note draft
 ⚠ This is a work in progress, and is subject to change.
 :::
 
@@ -96,5 +96,5 @@ The only difference is that the method and event names are prefixed with the lay
 
 Examples
 
-- for Lightning the an example method is `ln_getInvoice`
-- for Stacks the an example method is `stx_getAddress`
+- for Lightning an example method could be `ln_getInvoice`
+- for Stacks an example method could be `stx_getAddress`

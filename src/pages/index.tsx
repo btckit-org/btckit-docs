@@ -86,6 +86,7 @@ function HomepageHeader() {
                         <div className="header-code">
                           <CodeBlock language="ts" showLineNumbers>
                             {`import '@btckit/types';
+
 const addresses = await window.btc?.request('getAddresses');
                           `}
                           </CodeBlock>
@@ -112,7 +113,7 @@ const features = [
   {
     name: 'Bitcoin First',
     description:
-      'BtcKit is focused on Bitcoin first, while addressing interactions with L2s and similar protocols in a namespaced way.',
+      'btckit is focused on Bitcoin first, while addressing interactions with L2s and similar protocols in a namespaced way.',
     icon: TrophyIcon,
   },
   {
@@ -124,13 +125,13 @@ const features = [
   {
     name: 'Flexible & Future-Proof',
     description:
-      'With a very strict core protocol, but loose individual methods, BtcKit is meant to be flexible and future-proof.',
+      'With a very strict core protocol, but loose individual methods, btckit is meant to be flexible and future-proof.',
     icon: ArrowPathIcon,
   },
   {
     name: 'Backwards Compatible',
     description:
-      'BtcKit is inspired by other approaches, like webbtc. We will soon release a backwards compatible implementation of the protocol.',
+      'btckit is inspired by other approaches, like webbtc. We will soon release a backwards compatible implementation of the protocol.',
     icon: GlobeAmericasIcon,
   },
 ];
@@ -165,7 +166,7 @@ const roadmap = [
   {
     name: 'Client implementation',
     description:
-      'BtcKit should have a reference implementation with all basic methods included. This implementation simplify edge-cases, e.g. with multiple wallets installed.',
+      'btckit should have a reference implementation with all basic methods included. This implementation simplify edge-cases, e.g. with multiple wallets installed.',
   },
   {
     name: 'Legacy fallbacks',
