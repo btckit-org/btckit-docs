@@ -86,9 +86,7 @@ function HomepageHeader() {
                         <div className="header-code">
                           <CodeBlock language="ts" showLineNumbers>
                             {`import '@btckit/types';
-const address = await window.btc?.request("getAddresses", {
-  index: 2
-})
+const addresses = await window.btc?.request('getAddresses');
                           `}
                           </CodeBlock>
                         </div>
