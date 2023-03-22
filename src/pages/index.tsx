@@ -45,7 +45,7 @@ function HomepageHeader() {
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <a
-                      href="docs/intro"
+                      href="docs/spec"
                       className="rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
                     >
                       Documentation
