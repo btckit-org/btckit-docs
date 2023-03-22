@@ -199,7 +199,7 @@ const HomepageRoadmap = () => {
   return (
     <div className="bg-white dark:bg-gray-600">
       <div className="bg-gradient-to-b py-16 dark:from-slate-100/20 sm:py-24">
-        <div className="mx-auto max-w-7xl px-32 lg:px-48">
+        <div className="mx-auto max-w-7xl px-8 md:px-32 lg:px-48">
           <div className="mx-auto mb-28 max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-orange-600 dark:text-orange-300">
               Roadmap
