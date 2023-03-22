@@ -41,7 +41,7 @@ The main focus is on standardizing a method of serializing named parameters
 ```ts
 import "@btckit/types";
 
-const address = await globalThis.btc.request("requestAccounts", {
+const address = await globalThis.btc.request("getAddresses", {
   account: 0,
   change: false,
   index: 0,
@@ -97,7 +97,7 @@ The only difference is that the method and event names are prefixed with the lay
 Examples
 
 - for Lightning the an example method is `ln_getInvoice`
-- for Stacks the an example method is `stx_requestAccounts`
+- for Stacks the an example method is `stx_getAddress`
 
 Your trusted wallet
 
