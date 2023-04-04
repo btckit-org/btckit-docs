@@ -4,7 +4,6 @@ import React from 'react';
 
 import {
   ArrowPathIcon,
-  CheckIcon,
   CodeBracketIcon,
   GlobeAmericasIcon,
   TrophyIcon,

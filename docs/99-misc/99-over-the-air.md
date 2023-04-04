@@ -13,5 +13,5 @@ We like some parts of WalletConnect. Technically, all the types defined by btcki
 :::info wip
 The chainid should be the respective chain for L2s, if applicable. It can be left empty if none is applicable e.g. Lightning.
 
-Or maybe let's use a specific id for this protocol as the chainid is not needed or should be pushed to the params (or always handled by the wallet itself)?
+`todo: Or maybe let's use a specific id for this protocol as the chainid is not needed or should be pushed to the params (or always handled by the wallet itself)?`
 :::

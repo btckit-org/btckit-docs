@@ -34,7 +34,7 @@ ResponseResult = {
 
 ```ts
 const response = await window.btc.request('getAddresses', {
-  types: 'p2tr',
+  types: ['p2tr'],
 });
 
 console.log(response);
