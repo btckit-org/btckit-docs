@@ -5,7 +5,7 @@ title: Standard
 
 In practice, there are two standards:
 
-- [**Methods & Events**](/docs/01-standard/02-methods-events/README.md): JSON RPC 2.0 compatible methods and events with their respective parameters and return types.
+- [**Methods & Events**](/docs/01-standard/01-methods-events/README.md): JSON RPC 2.0 compatible methods and events with their respective parameters and return types.
 - [**Interface**](/docs/01-standard/02-interface/README.md): A global JavaScript object provides a simple interface for communicating with the wallet.
 
 ## Notes
