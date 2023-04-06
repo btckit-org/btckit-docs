@@ -1,10 +1,9 @@
 {
-  "position": 2.5,
-  "label": "Methods & Events",
+  "label": "LN",
   "collapsed": false,
   "link": {
     "type": "generated-index",
-    "title": "Namespaces"
+    "title": "Lightning (LN) — Methods & Events"
   },
   "customProps": {
     "description": "This description can be used in the swizzled DocCard"

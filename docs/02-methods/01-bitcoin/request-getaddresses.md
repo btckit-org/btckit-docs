@@ -6,23 +6,23 @@ slug: /requests/getaddresses
 #### `request` `'getAddresses'`
 
 ```ts
-globalThis.btc.request('getAddresses', params);
+window.btc.request('getAddresses', params);
 ```
 
 #### `params` type
 
 ```ts
-Params = {
+Params {
   types?: PaymentType[];
 };
 
 PaymentType = 'p2pkh' | 'p2sh' | 'p2wpkh-p2sh' | 'p2wpkh' | 'p2tr';
 ```
 
-#### `response`
+#### `response` result type
 
 ```ts
-ResponseResult = {
+ResponseResult {
   addresses: {
     type: PaymentType;
     address: string;
@@ -34,13 +34,13 @@ ResponseResult = {
 
 ```ts
 const response = await window.btc.request('getAddresses', {
-  types: 'p2tr',
+  types: ['p2tr'],
 });
 
 console.log(response);
 // {
 //   jsonrpc: '2.0',
-//   id: 'getInfo',
+//   id: 'c6b783c4-e0fa-4060-8a29-6ca2b45d68cf',
 //   result: [{
 //     type: 'p2tr',
 //     address: 'bc1q...',

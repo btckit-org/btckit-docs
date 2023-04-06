@@ -1,8 +1,9 @@
 {
-  "label": "Miscellaneous",
+  "label": "BTC",
+  "collapsed": false,
   "link": {
     "type": "generated-index",
-    "title": "Other Stuff"
+    "title": "Bitcoin (BTC) — Methods & Events"
   },
   "customProps": {
     "description": "This description can be used in the swizzled DocCard"

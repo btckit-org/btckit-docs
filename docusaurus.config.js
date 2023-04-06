@@ -45,6 +45,9 @@ const config = {
         //   editUrl:
         //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         // },
+        docs: {
+          breadcrumbs: false,
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -77,9 +80,13 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'spec/spec',
+            docId: 'standard/standard',
             position: 'left',
-            label: 'Spec',
+            label: 'Standard',
+          },
+          {
+            to: '/docs/packages',
+            label: 'Packages',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {

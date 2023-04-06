@@ -4,7 +4,6 @@ import React from 'react';
 
 import {
   ArrowPathIcon,
-  CheckIcon,
   CodeBracketIcon,
   GlobeAmericasIcon,
   TrophyIcon,
@@ -28,7 +27,9 @@ function HomepageHeader() {
                   <div className="mt-8 sm:mt-10 lg:mt-4">
                     <a href="/docs/spec">
                       <span className="inline-flex items-center space-x-1 rounded-full bg-orange-600/10 px-3 py-1 pl-4 text-sm font-semibold leading-6 text-orange-600 ring-1 ring-inset ring-orange-600/10 dark:text-orange-50 dark:ring-orange-300">
-                        <span>Specification v0.1.0-beta</span>
+                        <span>
+                          Standard <code className="relative -top-[1px]">draft</code>
+                        </span>
                         <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
                       </span>
                     </a>

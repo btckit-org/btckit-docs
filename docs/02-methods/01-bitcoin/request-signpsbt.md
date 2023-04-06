@@ -6,17 +6,17 @@ slug: /requests/signpsbt
 #### `request` `'signPsbt'`
 
 ```ts
-globalThis.btc.request('signPsbt', params);
+window.btc.request('signPsbt', params);
 ```
 
 #### `params` type
 
 `todo`
 
-#### `response`
+#### `response` result type
 
 ```ts
-ResponseResult = {
+ResponseResult {
   psbtHex: string;
   inputToSign: {
     sigHash: any[];
@@ -33,7 +33,7 @@ const response = await window.btc.request('signPsbt', {});
 console.log(response);
 // {
 //   jsonrpc: '2.0',
-//   id: 'getInfo',
+//   id: 'c6b783c4-e0fa-4060-8a29-6ca2b45d68cf',
 //   result: 'todo'
 // }
 ```
