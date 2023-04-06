@@ -1,7 +1,6 @@
 ---
 id: methods-events
 title: Methods & Events
-slug: /methods-events
 ---
 
 `draft`, `subject to change`

@@ -1,7 +1,6 @@
 ---
 id: interface
 title: Interface
-slug: /interface
 ---
 
 `draft`, `subject to change`
@@ -51,3 +50,7 @@ window.btc.listen('networkChanged', network => {
 Wallets can decide on how handle unimplemented methods (or make it configurable to the user).
 E.g. an unimplemented method could throw an error, or return an error object, or be "dropped" and stuck indefinitely.
 :::
+
+## Open Questions
+
+- [ ] Should the window.btc returned Promises already detect errors in the response and reject the Promise with the error code? Should fields like `id` and `jsonrpc` be part of the Promise response or just the result/error?

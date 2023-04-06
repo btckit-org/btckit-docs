@@ -1,7 +1,6 @@
 ---
 id: packages
 title: Packages
-slug: /packages
 ---
 
 The basic standard does not require dependencies to be used.
