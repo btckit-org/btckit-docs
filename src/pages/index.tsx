@@ -25,7 +25,7 @@ function HomepageHeader() {
               <div className="mx-auto max-w-2xl">
                 <div className="max-w-lg">
                   <div className="mt-8 sm:mt-10 lg:mt-4">
-                    <a href="/docs/spec">
+                    <a href="/docs/standard">
                       <span className="inline-flex items-center space-x-1 rounded-full bg-orange-600/10 px-3 py-1 pl-4 text-sm font-semibold leading-6 text-orange-600 ring-1 ring-inset ring-orange-600/10 dark:text-orange-50 dark:ring-orange-300">
                         <span>
                           Standard <code className="relative -top-[1px]">draft</code>
@@ -46,10 +46,10 @@ function HomepageHeader() {
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <a
-                      href="docs/spec"
+                      href="docs/standard"
                       className="rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
                     >
-                      Documentation
+                      Standard
                     </a>
                     <a
                       href={githubBtcKitUrl}
@@ -230,10 +230,10 @@ function Cta() {
 
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href="/docs/spec"
+              href="/docs/standard"
               className="rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
             >
-              Read the spec
+              Read the Standard
             </a>
             <a
               href={githubBtcKitUrl}
