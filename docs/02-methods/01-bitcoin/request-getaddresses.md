@@ -1,7 +1,9 @@
 ---
-title: request-getAddresses
+sidebar_label: getAddresses
 slug: /requests/getaddresses
 ---
+
+# request `'getAddresses'`
 
 #### `request` `'getAddresses'`
 

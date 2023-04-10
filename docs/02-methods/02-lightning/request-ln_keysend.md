@@ -1,7 +1,9 @@
 ---
-title: request-ln_keysend
+sidebar_label: ln_keysend
 slug: /requests/ln_keysend
 ---
+
+# request `'ln_keysend'`
 
 ⚡️ [WebLN Guide — `webln.keysend`](https://www.webln.guide/building-lightning-apps/webln-reference/webln.keysend)
 

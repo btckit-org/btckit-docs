@@ -1,7 +1,9 @@
 ---
-title: request-getInfo
+sidebar_label: getInfo
 slug: /requests/getinfo
 ---
+
+# request `'getInfo'`
 
 #### `request` `'getInfo'`
 

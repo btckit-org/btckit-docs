@@ -1,7 +1,9 @@
 ---
-title: request-signPsbt
+sidebar_label: signPsbt
 slug: /requests/signpsbt
 ---
+
+# request `'signPsbt'`
 
 #### `request` `'signPsbt'`
 
