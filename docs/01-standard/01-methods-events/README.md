@@ -18,19 +18,59 @@ This is a short recap of the sections of the JSON RPC 2.0 specification relevant
 
 `coming soon`
 
-### Notes & Alterations
+#### Notes & Alterations
 
-#### Case Sensitivity
+- Case Sensitivity: Methods should be case insensitive. (Following webbtc lowercase convention)
 
-Methods should be case insensitive. (Following webbtc lowercase convention)
+#### TypeScript and JSON
+
+This standard may use TypeScript types to describe the methods and events.
+Sometimes types like `any` are used to describe the data types.
+This is because JSON does not have a type system.
+However, only correctly JSON-serializable types are implied when using `any` (or any other type) in the specification for methods/events.
+
+E.g., `bigint` is NOT serializable to JSON by default, so it is not allowed.
+
+If a method/event requires a `bigint` as a parameter, for example, it should be specified as a string (or any other JSON-serializable).
+The standard will accept any value which is JSON-serializable and can be used by the types constructor.
+
+E.g. for `bigint` we refer to the [BigInt constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) which also accepts strings in the format `0x123` to construct from a hex-value.
+
+### General Fields and Types
+
+#### `params.network`
+
+Any params object can have an optional `network` field.
+
+```ts
+network?: string | NetworkObject;
+```
+
+```ts
+network:
+```
+
+#### `params.meta`
+
+Any params object can have an optional `meta` field.
+
+```ts
+meta?: {
+  [key: string]: any;
+};
+```
+
+There are no rules on what can be in the `meta` object. Web-apps can use it to send any data they want to a wallet.
+The `meta` field is meant for optional data that is not part of the method's core functionality.
+But it can also be used for unstable params that are not yet part of the standard.
 
 ### `exactMethods`
 
-`coming soon`
+`coming soon` `todo`
 
 ## Events
 
-`coming soon`
+`coming soon` `todo`
 
 ---
 

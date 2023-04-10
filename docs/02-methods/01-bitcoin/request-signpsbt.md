@@ -11,17 +11,22 @@ window.btc.request('signPsbt', params);
 
 #### `params` type
 
-`todo`
+```ts
+Params {
+  psbtBase64: string,
+  inputsToSign: [{
+    address: string,
+    signingIndexes: number[], // int array of indexes to sign
+  }],
+  broadcast: boolean,
+}
+```
 
 #### `response` result type
 
 ```ts
 ResponseResult {
-  psbtHex: string;
-  inputToSign: {
-    sigHash: any[];
-  }[];
-  network: any;
+  // todo
 };
 ```
 
