@@ -99,3 +99,9 @@ Examples
 - for Stacks an example method could be `stx_getAddresses`
 
 The exact definition of the methods on these layers are not officially part of the standard. They may be standardized by the respective ecosystems and communities.
+
+---
+
+### References
+
+- [bitcoin js networks.js](https://github.com/bitcoinjs/bitcoinjs-lib/blob/master/src/networks.js)
