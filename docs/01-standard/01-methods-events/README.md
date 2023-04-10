@@ -45,7 +45,7 @@ It is up to the wallet provider to decide if they want to respect the `network` 
 For safety reasons, the a wallet may ignore the `network` field completely or let the user choose in their UI.
 
 ```ts
-network?: string | NetworkObject;
+network?: string | object;
 ```
 
 `examples`
