@@ -41,13 +41,26 @@ E.g. for `bigint` we refer to the [BigInt constructor](https://developer.mozilla
 #### `params.network`
 
 Any params object can have an optional `network` field.
+It is up to the wallet provider to decide if they want to respect the `network` field and which networks they support.
+For safety reasons, the a wallet may ignore the `network` field completely or let the user choose in their UI.
 
 ```ts
 network?: string | NetworkObject;
 ```
 
+`examples`
+
 ```ts
-network:
+network: 'mainnet';
+network: 'testnet';
+
+// this network object has been adopted by many bitcoin javascript libraries
+network: {
+  bech32: 'tb',
+  pubKeyHash: 0x6f,
+  scriptHash: 0xc4,
+  wif: 0xef,
+}
 ```
 
 #### `params.meta`
